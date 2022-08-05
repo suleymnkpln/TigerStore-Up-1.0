@@ -1,34 +1,53 @@
 import {StyleSheet, Dimensions} from 'react-native';
 
-const deviceSize = Dimensions.get('window'); //Ekrana sıgdır
+const getSize = Dimensions.get('window');
 
 export default StyleSheet.create({
   container: {
     flex: 1,
   },
-  body_container: {
-    padding: 10,
-  },
   image: {
-    width: deviceSize.width,
-    height: deviceSize.height / 3,
-    resizeMode: 'contain',
-    backgroundColor: 'white',
+    height: getSize.height / 3,
   },
-  title: {
+  body_container: {
+    margin: 5,
+  },
+  meal_name: {
+    fontSize: 22,
+    color: '#B62D2D',
     fontWeight: 'bold',
-    fontSize: 23,
   },
-  desc: {
-    fontStyle: 'italic',
-    marginVertical: 5,
+  meal_from: {
+    fontSize: 18,
+    color: '#B62D2D',
+    fontWeight: '500',
   },
-  price: {
-    fontWeight: 'bold',
+  separator: {
+    borderBottomColor: '#D2D2D2',
+    borderBottomWidth: 1,
+    marginTop: 3,
+    marginBottom: 3,
+  },
+  description: {
+    marginLeft: 5,
+    marginRight: 5,
+    color: 'black',
+    textAlign: 'justify',
+  },
+  button: {
+    borderWidth: 1,
+    backgroundColor: 'red',
+    margin: 6,
+    padding: 4,
+    height: 40,
+    borderColor: 'red',
+    borderRadius: 6,
+  },
+  button_text: {
+    textAlign: 'center',
+    alignItems: 'center',
+    color: 'white',
     fontSize: 20,
-    textAlign: 'right',
-  },
-  animation: {
-    height: 200,
+    fontWeight: '500',
   },
 });

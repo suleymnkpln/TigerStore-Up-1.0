@@ -8,13 +8,15 @@ const Button = ({text, onPress}) => {
       <TouchableOpacity style={styles.container} onPress={onPress}>
         <Text style={styles.text}>{text}</Text>
       </TouchableOpacity>
-      <Text
-        onPress={() =>
-          Linking.openURL('https://www.instagram.com/suleymnkplnx/')
-        }
-        style={styles.instagram}>
-        @suleymnkplnx
-      </Text>
+      <View style={styles.insta_container}>
+        <Text
+          onPress={() =>
+            Linking.openURL('https://www.instagram.com/suleymnkplnx/')
+          }
+          style={styles.insta_text}>
+          @suleymnkplnx
+        </Text>
+      </View>
     </View>
   );
 };

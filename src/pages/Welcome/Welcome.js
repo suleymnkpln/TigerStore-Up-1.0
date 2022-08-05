@@ -1,16 +1,20 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Image, ImageBackground} from 'react-native';
 import styles from './Welcome.style';
 import Button from '../../components/Button';
 
 function Welcome({navigation}) {
-  function goToProductsPage() {
-    navigation.navigate('ProductsPage');
+  function goToCategoriesPage() {
+    navigation.navigate('CategoriesPage');
   }
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>TİGER STORE</Text>
-      <Button text="PRODUCTS" onPress={goToProductsPage} />
+      <ImageBackground
+        source={require('./background.png')}
+        style={styles.image}>
+        <Text style={styles.header}>FOOD RECİPES</Text>
+        <Button text="CATEGORİES" onPress={goToCategoriesPage} />
+      </ImageBackground>
     </View>
   );
 }

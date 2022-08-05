@@ -2,13 +2,14 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-import Products from './pages/Products';
+import Meals from './pages/Meals';
+import Categories from './pages/Categories';
 import Detail from './pages/Detail';
 import Welcome from './pages/Welcome';
 
 const Stack = createNativeStackNavigator();
 
-export default function () {
+const Router = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
@@ -18,28 +19,41 @@ export default function () {
           options={{headerShown: false}}
         />
         <Stack.Screen
-          name="ProductsPage"
-          component={Products}
+          name="CategoriesPage"
+          component={Categories}
           options={{
-            title: 'Tiger Store',
+            title: 'Categories',
             headerStyle: {backgroundColor: '#f4511e'},
             headerTitleStyle: {color: '#fff'},
             headerTitleAlign: 'center',
-            headerTintColor: 'white', //Geri buton rengi
+            headerTintColor: 'white',
           }}
         />
         <Stack.Screen
-          name="DetailPage"
-          component={Detail}
+          name="MealsPage"
+          component={Meals}
           options={{
-            title: 'Product Details',
+            title: 'Meals',
             headerStyle: {backgroundColor: '#f4511e'},
             headerTitleStyle: {color: '#fff'},
             headerTitleAlign: 'center',
-            headerTintColor: 'white', //Geri buton rengi
+            headerTintColor: 'white',
+          }}
+        />
+        <Stack.Screen
+          name="DetailsPage"
+          component={Detail}
+          options={{
+            title: 'Detail',
+            headerStyle: {backgroundColor: '#f4511e'},
+            headerTitleStyle: {color: '#fff'},
+            headerTitleAlign: 'center',
+            headerTintColor: 'white',
           }}
         />
       </Stack.Navigator>
     </NavigationContainer>
   );
-}
+};
+
+export default Router;
