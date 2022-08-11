@@ -1,8 +1,11 @@
 # TigerStore-Up-1.0
-The application that can be logged in with the user name and password, and also the application conversion of the data taken with the api
+>New Features
+
+**Login Form**
+**LogOut Button**
+**Remember the logged in user**
 
 ![This is an image](https://github.com/suleymnkpln/TigerStore-Up-1.0/blob/main/images/ss.jpg)
 
-# User and password
-## The second largest heading
+>User and password
 ###### johnd - m38rmF$
