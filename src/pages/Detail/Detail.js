@@ -1,23 +1,17 @@
 import React from 'react';
-import {FlatList, Linking} from 'react-native';
+import {View, Text, Image} from 'react-native';
 import Config from 'react-native-config';
+
 import useFetch from '../../hooks/useFetch';
 import Loading from '../../components/Loading';
 import Error from '../../components/Error';
+import Shop from '../../components/Shop';
 
-import DetailCard from '../../components/Card/DetailCard';
+import styles from './Detail.style';
 
 const Detail = ({route}) => {
-  const {idMeal} = route.params;
-
-  const {data, loading, error} = useFetch(`${Config.API_DETAIL}${idMeal}`);
-
-  const renderDetail = ({item}) => (
-    <DetailCard
-      detail={item}
-      onSelect={() => Linking.openURL(item.strYoutube)}
-    />
-  );
+  const {id} = route.params;
+  const {loading, error, data} = useFetch(`${Config.API_PRODUCT_URL}/${id}`);
 
   if (loading) {
     return <Loading />;
@@ -26,7 +20,19 @@ const Detail = ({route}) => {
   if (error) {
     return <Error />;
   }
-  return <FlatList data={data.meals} renderItem={renderDetail} />;
-};
 
+  return (
+    <View style={styles.container}>
+      <Image source={{uri: data.image}} style={styles.image} />
+      <View style={styles.body_container}>
+        <Text style={styles.title}>{data.title}</Text>
+        <Text style={styles.desc}>{data.description}</Text>
+        <Text style={styles.price}>{data.price} TL</Text>
+        <View style={styles.animation}>
+          <Shop />
+        </View>
+      </View>
+    </View>
+  );
+};
 export default Detail;

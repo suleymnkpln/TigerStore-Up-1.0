@@ -7,24 +7,15 @@ export default StyleSheet.create({
     padding: 10,
     margin: 10,
     alignItems: 'center',
+    justifyContent: 'center',
   },
   text: {
-    fontSize: 20,
     color: 'white',
     fontWeight: 'bold',
   },
-  insta_text: {
+  instagram: {
     textAlign: 'center',
-    fontSize: 15,
     fontWeight: 'bold',
-    color: 'black',
-    backgroundColor: 'white',
-    borderRadius: 10,
-    borderBottomWidth: 8,
-  },
-  insta_container: {
-    paddingLeft: 70,
-    paddingRight: 70,
-    top: 10,
+    marginTop: 10,
   },
 });

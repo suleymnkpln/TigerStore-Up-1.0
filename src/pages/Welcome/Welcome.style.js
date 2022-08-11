@@ -7,18 +7,8 @@ export default StyleSheet.create({
   },
   header: {
     textAlign: 'center',
-    fontSize: 40,
+    fontSize: 50,
     fontWeight: 'bold',
     margin: 10,
-    backgroundColor: 'rgba(0, 0, 0, 0.9);',
-    color: 'white',
-    borderRadius: 10,
-  },
-  animation: {},
-  image: {
-    width: '100%',
-    height: '100%',
-    justifyContent: 'center',
-    opacity: 1,
   },
 });
