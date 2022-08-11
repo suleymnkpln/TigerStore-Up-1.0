@@ -1,5 +1,5 @@
 # TigerStore-Up-1.0
->New Features
+<sup> New Features</sup>
 
 **Login Form**
 **LogOut Button**
