@@ -7,9 +7,6 @@
 
 ![This is an image](https://github.com/suleymnkpln/TigerStore-Up-1.0/blob/main/images/ss.jpg)
 
-**User and password**
-> johnd - m38rmF$
-
 ## <font color="orange">User and password</font>
 - <font color="pink">User: johnd</font>
 - <font color="cyan">Password: m38rmF$</font>
